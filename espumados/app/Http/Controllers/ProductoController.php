@@ -14,7 +14,6 @@ class ProductoController extends Controller
      */
     public function index()
     {
-        // return view("productos_index", ["productos" => Producto::all()]);
         $productos = Producto::all();
         return view('producto.index', compact('productos'));
     }
@@ -39,7 +38,8 @@ class ProductoController extends Controller
     {
         $producto = new Producto($request->input());
         $producto->saveOrFail();
-        return view("productos_create")->with("mensaje", "Producto guardado");
+
+        return redirect('/productos');
     }
 
     /**
@@ -61,8 +61,8 @@ class ProductoController extends Controller
      */
     public function edit($id)
     {
-        return view("productos_edit", ["producto" => $producto,
-        ]);
+        $producto = Producto::find($id);
+        return view('producto.edit', compact('producto'));
     }
 
     /**
@@ -74,9 +74,9 @@ class ProductoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $producto->fill($request->input());
-        $producto->saveOrFail();
-        return redirect()->route("index")->with("mensaje", "Producto actualizado");
+        $producto = Producto::find($id);
+        $producto->fill(request()->input())->save();
+        return redirect('/productos');
     }
 
     /**
@@ -87,7 +87,9 @@ class ProductoController extends Controller
      */
     public function destroy($id)
     {
+        $producto = Producto::find($id);        
         $producto->delete();
-        return redirect()->route("index")->with("mensaje", "Producto eliminado");
+
+        return redirect('/productos');
     }
 }

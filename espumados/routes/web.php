@@ -14,8 +14,5 @@ use App\Http\Controllers\ProductoController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('productos_create');
-// });
-
+Route::get('/', [ProductoController::class, 'index']);
 Route::resource('productos','App\Http\Controllers\ProductoController');

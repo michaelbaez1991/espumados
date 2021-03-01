@@ -2,7 +2,6 @@
 
 @section('content')
 
-
 <br><br>
 <div class="container">
     <div class="col-12">
@@ -18,9 +17,7 @@
                     <th>Precio de venta</th>
                     <th>Utilidad</th>
                     <th>Existencia</th>
-
-                    <th>Editar</th>
-                    <th>Eliminar</th>
+                    <th>Acciones</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -33,17 +30,11 @@
                         <td>{{$producto->precio_venta - $producto->precio_compra}}</td>
                         <td>{{$producto->existencia}}</td>
                         <td>
-                            {{-- <a class="btn btn-warning" href="{{route("productos.edit",[$producto])}}"> --}}
-                                <i class="fa fa-edit"></i>
-                            </a>
-                        </td>
-                        <td>
-                            {{-- <form action="{{route("productos.destroy", [$producto])}}" method="post"> --}}
-                                @method("delete")
-                                @csrf
-                                <button type="submit" class="btn btn-danger">
-                                    <i class="fa fa-trash"></i>
-                                </button>
+                            <form action="{{ route('productos.destroy', $producto->id) }}" method="POST">
+                                <a href="/productos/{{$producto->id}}/edit" class="btn btn-info btn-sm">Editar</a>         
+                                    @csrf
+                                    @method('DELETE')
+                                <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
                             </form>
                         </td>
                     </tr>
