@@ -16,7 +16,7 @@
                         <label>Cantidad</label>
                         <input type="text" class="form-control" v-model="product.cantidad">
                     </div>
-                    <button type="submit" class="btn btn-primary">Update</button>
+                    <button type="submit" class="btn btn-primary">Actualizar</button>
                 </form>
             </div>
         </div>

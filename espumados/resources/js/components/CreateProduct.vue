@@ -17,7 +17,7 @@
                         <label>Cantidad</label>
                         <input type="text" class="form-control" v-model="product.cantidad">
                     </div>
-                    <button type="submit" class="btn btn-primary">Create</button>
+                    <button type="submit" class="btn btn-primary">Crear</button>
                 </form>
             </div>
         </div>

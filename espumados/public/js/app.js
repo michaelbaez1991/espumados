@@ -37900,7 +37900,7 @@ var render = function() {
                 _c(
                   "router-link",
                   { staticClass: "nav-item nav-link", attrs: { to: "/" } },
-                  [_vm._v("Products List")]
+                  [_vm._v("Lista de productos")]
                 ),
                 _vm._v(" "),
                 _c(
@@ -37909,7 +37909,7 @@ var render = function() {
                     staticClass: "nav-item nav-link",
                     attrs: { to: "/create" }
                   },
-                  [_vm._v("Create Product")]
+                  [_vm._v("Crear Producto")]
                 )
               ],
               1
@@ -37947,7 +37947,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("h2", { staticClass: "text-center" }, [_vm._v("Products List")]),
+    _c("h2", { staticClass: "text-center" }, [_vm._v("Lsita de productos")]),
     _vm._v(" "),
     _c("table", { staticClass: "table" }, [
       _vm._m(0),
@@ -37977,7 +37977,7 @@ var render = function() {
                         to: { name: "edit", params: { id: product.id } }
                       }
                     },
-                    [_vm._v("Edit")]
+                    [_vm._v("Editar")]
                   ),
                   _vm._v(" "),
                   _c(
@@ -37990,7 +37990,7 @@ var render = function() {
                         }
                       }
                     },
-                    [_vm._v("Delete")]
+                    [_vm._v("Eliminar")]
                   )
                 ],
                 1
@@ -38010,7 +38010,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("thead", [
       _c("tr", [
-        _c("th", [_vm._v("ID")]),
+        _c("th", [_vm._v("Id")]),
         _vm._v(" "),
         _c("th", [_vm._v("Nombre")]),
         _vm._v(" "),
@@ -38044,7 +38044,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("h3", { staticClass: "text-center" }, [_vm._v("Create Product")]),
+    _c("h3", { staticClass: "text-center" }, [_vm._v("Crear Producto")]),
     _vm._v(" "),
     _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col-md-6" }, [
@@ -38144,7 +38144,7 @@ var render = function() {
             _c(
               "button",
               { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-              [_vm._v("Create")]
+              [_vm._v("Crear")]
             )
           ]
         )
@@ -38176,7 +38176,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("h3", { staticClass: "text-center" }, [_vm._v("Edit Product")]),
+    _c("h3", { staticClass: "text-center" }, [_vm._v("Editar Producto")]),
     _vm._v(" "),
     _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col-md-6" }, [
@@ -38276,7 +38276,7 @@ var render = function() {
             _c(
               "button",
               { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-              [_vm._v("Update")]
+              [_vm._v("Actualizar")]
             )
           ]
         )
