@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h2 class="text-center">Lsita de productos</h2>
+        <h2 class="text-center">Lista de productos</h2>
  
         <table class="table">
             <thead>
@@ -9,7 +9,6 @@
                 <th>Nombre</th>
                 <th>Marca</th>
                 <th>Cantidad</th>
-                <!-- <th>Actions</th> -->
             </tr>
             </thead>
             <tbody>

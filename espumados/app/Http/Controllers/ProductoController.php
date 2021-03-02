@@ -36,11 +36,6 @@ class ProductoController extends Controller
      */
     public function store(Request $request)
     {
-        // $producto = new Producto($request->input());
-        // $producto->saveOrFail();
-
-        // return redirect('/productos');
-
         $product = new Producto($request->input());
         $product->save();
 

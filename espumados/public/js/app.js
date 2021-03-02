@@ -1906,7 +1906,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -37947,7 +37946,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("h2", { staticClass: "text-center" }, [_vm._v("Lsita de productos")]),
+    _c("h2", { staticClass: "text-center" }, [_vm._v("Lista de productos")]),
     _vm._v(" "),
     _c("table", { staticClass: "table" }, [
       _vm._m(0),
