@@ -1,11 +1,11 @@
 <template>
     <div>
-        <h2 class="text-center">Products List</h2>
+        <h2 class="text-center">Lsita de productos</h2>
  
         <table class="table">
             <thead>
             <tr>
-                <th>ID</th>
+                <th>Id</th>
                 <th>Nombre</th>
                 <th>Marca</th>
                 <th>Cantidad</th>
@@ -20,8 +20,8 @@
                 <td>{{ product.cantidad }}</td>
                 <td>
                     <div class="btn-group" role="group">
-                        <router-link :to="{name: 'edit', params: { id: product.id }}" class="btn btn-success">Edit</router-link>
-                        <button class="btn btn-danger" @click="deleteProduct(product.id)">Delete</button>
+                        <router-link :to="{name: 'edit', params: { id: product.id }}" class="btn btn-success">Editar</router-link>
+                        <button class="btn btn-danger" @click="deleteProduct(product.id)">Eliminar</button>
                     </div>
                 </td>
             </tr>
