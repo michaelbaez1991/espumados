@@ -14,5 +14,8 @@ use App\Http\Controllers\ProductoController;
 |
 */
 
-Route::get('/', [ProductoController::class, 'index']);
-Route::resource('productos','App\Http\Controllers\ProductoController');
+// Route::get('/', [ProductoController::class, 'index']);
+// Route::resource('productos','App\Http\Controllers\ProductoController');
+Route::get('{any}', function () {
+    return view('app');
+})->where('any', '.*');

@@ -28,7 +28,7 @@ class ProductoController extends Controller
      */
     public function create()
     {
-        return view("producto.create");
+        // return view("producto.create");
     }
 
     /**
@@ -39,10 +39,15 @@ class ProductoController extends Controller
      */
     public function store(Request $request)
     {
-        $producto = new Producto($request->input());
-        $producto->saveOrFail();
+        // $producto = new Producto($request->input());
+        // $producto->saveOrFail();
 
-        return redirect('/productos');
+        // return redirect('/productos');
+
+        $product = new Product($request->input());
+        $product->save();
+
+        return response()->json('Product created!');
     }
 
     /**
@@ -53,7 +58,8 @@ class ProductoController extends Controller
      */
     public function show($id)
     {
-        //
+        $product = Product::find($id);
+        return response()->json($product);
     }
 
     /**
@@ -64,8 +70,8 @@ class ProductoController extends Controller
      */
     public function edit($id)
     {
-        $producto = Producto::find($id);
-        return view('producto.edit', compact('producto'));
+        // $producto = Producto::find($id);
+        // return view('producto.edit', compact('producto'));
     }
 
     /**
@@ -77,9 +83,14 @@ class ProductoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $producto = Producto::find($id);
-        $producto->fill(request()->input())->save();
-        return redirect('/productos');
+        // $producto = Producto::find($id);
+        // $producto->fill(request()->input())->save();
+        // return redirect('/productos');
+
+        $product = Product::find($id);
+        $product->update($request->all());
+
+        return response()->json('Product updated!');
     }
 
     /**
@@ -90,9 +101,14 @@ class ProductoController extends Controller
      */
     public function destroy($id)
     {
-        $producto = Producto::find($id);        
-        $producto->delete();
+        // $producto = Producto::find($id);        
+        // $producto->delete();
 
-        return redirect('/productos');
+        // return redirect('/productos');
+
+        $product = Product::find($id);
+        $product->delete();
+
+        return response()->json('Product deleted!');
     }
 }
